@@ -9,6 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var timer: NSTimer!
+    var enemyTimer: NStimer!
+    
+    var enemy: Enemy!
+    var pleyer: Player!
+    
+    let util: TechDraUtility = TechDraUtility()
+    
+    @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var attackButton: UIButton!
+    
+    @IBOutlet var 
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
