@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         playerHPBar.transform = CGAffineTransformMakeScale(1.0, 4.0)
         initStatus()
         
-        enemyTimer = NSTimer.scheduledTimerWithTimeInterval(enemy.speed), target: self, selector: "enemyAttack", userInfo: nil, repeats: true)
+        enemyTimer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(enemy.speed), target: self, selector: "enemyAttack", userInfo: nil, repeats: true)
         enemyTimer .fire()
     }
     
@@ -57,6 +57,10 @@ class ViewController: UIViewController {
         playerHPBar.progress = player.currentHP / player.maxHP
         
         cureHP()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        util.playBGM("BGM_battle001")
     }
 
     override func didReceiveMemoryWarning() {
