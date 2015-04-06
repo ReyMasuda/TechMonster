@@ -55,8 +55,6 @@ class ViewController: UIViewController {
         
         enemyHPBar.progress = enemy.currentHP / enemy.maxHP
         playerHPBar.progress = player.currentHP / player.maxHP
-        
-        cureHP()
     }
     
     override func viewDidAppear(animated: Bool) {
